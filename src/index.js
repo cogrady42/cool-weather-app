@@ -9,7 +9,15 @@ function formatDate(timestamp) {
     minutes = `0${minutes}`;
   }
 
-  let days = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday"];
+  let days = [
+    "sunday",
+    "monday",
+    "tuesday",
+    "wednesday",
+    "thursday",
+    "friday",
+    "saturday",
+  ];
   let day = days[date.getDay()];
   return `last updated: ${day} ${hours}:${minutes}`;
 }
