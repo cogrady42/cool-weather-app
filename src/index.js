@@ -11,7 +11,7 @@ function formatDate(timestamp) {
 
   let days = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday"];
   let day = days[date.getDay()];
-  return `${day} ${hours}:${minutes}`;
+  return `last updated: ${day} ${hours}:${minutes}`;
 }
 
 function searchCity(city) {
@@ -43,6 +43,13 @@ function displayWeather(response) {
   document.querySelector("#current-time").innerHTML = formatDate(
     response.data.dt * 1000
   );
+  let iconElement = document.querySelector("#icon");
+
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function getCurrentLocation(event) {
