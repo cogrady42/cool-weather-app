@@ -44,9 +44,6 @@
                   class="change-city"
                 />
                 <input type="submit" value="search" class="search-button" />
-                <button class="search-button" id="current-location-search">
-                  location
-                </button>
               </form>
             </div>
           </div>
@@ -62,11 +59,15 @@
               </div>
             </div>
             <div class="col">
-              <div class="temperature">
+              <span class="temperature">
                 <span id="current-temperature"> 4</span
-                ><a href="" id="degrees-celsius">°C|</a
-                ><a href="" id="degrees-fahrenheit">°F </a>
-              </div>
+                ></span><span class="degrees">
+                <a href="" id="degrees-celsius" class="active">°C</a>|<a
+                  href=""
+                  id="degrees-fahrenheit"
+                  >°F</span>
+                </a>
+              
             </div>
             <div class="col">
               <div class="feels-like">
