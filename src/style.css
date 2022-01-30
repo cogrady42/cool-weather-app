@@ -104,14 +104,12 @@ h2 {
   font-size: 15px;
 }
 
-.days {
-  font-size: 15px;
-  padding-top: 40px;
+.weather-forecast-temperature-max {
+  font-weight: bolder;
 }
 
-.icons {
-  color: #6ba8a9;
-  font-size: 47px;
+.weather-forecast-temperature-min {
+  font-weight: lighter;
 }
 
 .source {
