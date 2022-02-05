@@ -66,28 +66,8 @@ h1 {
 
 .degrees {
   font-size: 20px;
-  font-weight: 300;
+  font-weight: 500;
   vertical-align: 57px;
-}
-
-a {
-  color: #357376;
-  transition: all 200ms ease-in-out;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #0c1b1b;
-  cursor: pointer;
-}
-
-.degrees .active {
-  font-weight: 600;
-  cursor: default;
-}
-
-.degrees.active:hover {
-  color: #357376;
 }
 
 .feels-like {

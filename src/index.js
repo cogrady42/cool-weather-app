@@ -64,28 +64,6 @@ function getForecast(coordinates) {
   axios.get(apiUrl).then(displayForecast);
 }
 
-function displayFahrenheitTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#current-temperature");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-  let feelsLike = document.querySelector("#currently-feels-like");
-  feelsLike.innerHTML = Math.round((feelsLikeTemperature * 9) / 5 + 32);
-
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-}
-
-function displayCelsiusTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#current-temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-  let feelsLike = document.querySelector("#currently-feels-like");
-  feelsLike.innerHTML = Math.round(feelsLikeTemperature);
-  fahrenheitLink.classList.remove("active");
-  celsiusLink.classList.add("active");
-}
-
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
@@ -132,14 +110,7 @@ function displayForecast(response) {
   forecastElement.innerHTML = forecastHTML;
 }
 
-let celsiusTemperature = null;
 let feelsLikeTemperature = null;
-
-let fahrenheitLink = document.querySelector("#degrees-fahrenheit");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
-
-let celsiusLink = document.querySelector("#degrees-celsius");
-celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 let changeCityForm = document.querySelector("#change-city-form");
 changeCityForm.addEventListener("submit", changeCity);
