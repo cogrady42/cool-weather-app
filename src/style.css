@@ -94,7 +94,7 @@ a:hover {
   font-size: 12px;
 }
 
-.temperature2 {
+.feels-like-temperature {
   color: #357376;
   font-size: 20px;
   text-align: center;
@@ -102,6 +102,7 @@ a:hover {
 
 h2 {
   font-size: 15px;
+  margin-bottom: 50px;
 }
 
 .weather-forecast-temperature-max {
