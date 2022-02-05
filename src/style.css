@@ -1,14 +1,18 @@
 body {
-  color: #1d4d4f;
+  color: #a45c5c;
   font-family: "Roboto Condensed", sans-serif;
   text-align: center;
 }
 
 .weather-app {
-  background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(255, 246, 236) 39.5%,
+    rgba(100, 46, 122, 0.23) 100.2%
+  );
   border-style: solid;
   border-radius: 5px;
-  border: #dfe9f3;
+  border: rgb(254, 246, 236);
   box-shadow: 0 2px 2px 0 rgb(0 0 0 / 16%), 0 0 0 1px rgb(0 0 0 / 8%);
   margin: 20px auto;
   max-width: 650px;
@@ -34,18 +38,18 @@ body {
 }
 
 .search-button {
-  background: white;
-  border-color: #dfe9f3;
+  background: rgb(254, 246, 236, 0.8);
+  border-color: rgb(254, 246, 236);
   border-width: 1px;
   border-radius: 2px;
   border-style: solid;
-  color: #1d4d4f;
+  color: #a45c5c;
   font-size: 15px;
   transition: all 200ms ease-in-out;
 }
 
 .search-button:hover {
-  background: whitesmoke;
+  background: rgb(255, 250, 241);
 }
 
 h1 {
@@ -58,7 +62,7 @@ h1 {
 }
 
 .temperature {
-  color: #357376;
+  color: #dc7646;
   font-size: 100px;
   font-weight: 600;
   line-height: 1;
@@ -75,7 +79,7 @@ h1 {
 }
 
 .feels-like-temperature {
-  color: #357376;
+  color: #dc7646;
   font-size: 20px;
   text-align: center;
 }
@@ -83,6 +87,14 @@ h1 {
 h2 {
   font-size: 15px;
   margin-bottom: 50px;
+}
+
+.forecast-wrapper {
+  background-color: rgb(227, 214, 227, 0.6);
+  border: rgb(254, 246, 236);
+  border-width: 1px;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 16%), 0 0 0 1px rgb(0 0 0 / 8%);
 }
 
 .weather-forecast-temperature-max {
@@ -100,4 +112,9 @@ h2 {
 
 .source-link {
   text-decoration: underline;
+  color: #a45c5c;
+}
+
+.source-link:hover {
+  color: #ffc7c7;
 }
