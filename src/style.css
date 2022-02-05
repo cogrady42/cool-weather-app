@@ -74,19 +74,8 @@ h1 {
   vertical-align: 57px;
 }
 
-.feels-like {
-  font-size: 12px;
-}
-
-.feels-like-temperature {
-  color: #dc7646;
-  font-size: 20px;
-  text-align: center;
-}
-
-h2 {
-  font-size: 15px;
-  margin-bottom: 50px;
+.weather-forecast {
+  margin-top: 40px;
 }
 
 .forecast-wrapper {

@@ -48,14 +48,17 @@ function displayWeather(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
-  feelsLikeTemperature = Math.round(response.data.main.feels_like);
-  document.querySelector(
-    "#currently-feels-like"
-  ).innerHTML = `${feelsLikeTemperature}°`;
+
   document.querySelector("#current-time").innerHTML = formatDate(
     response.data.dt * 1000
   );
 
+  document
+    .querySelector("#current-weather-icon")
+    .setAttribute(
+      "src",
+      `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
   getForecast(response.data.coord);
 }
 
@@ -112,8 +115,6 @@ function displayForecast(response) {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
-
-let feelsLikeTemperature = null;
 
 let changeCityForm = document.querySelector("#change-city-form");
 changeCityForm.addEventListener("submit", changeCity);

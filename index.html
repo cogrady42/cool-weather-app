@@ -51,7 +51,7 @@
           <h1 id="city">Toronto</h1>
 
           <div class="row align-items-center">
-            <div class="col">
+            <div class="col-4">
               <div class="details">
                 humidity: <span id="humidity">76</span>%
                 <br />
@@ -59,25 +59,22 @@
               </div>
             </div>
 
-            <div class="col">
+            <div class="col-4">
               <span class="temperature">
                 <span id="current-temperature"> 4</span></span
               ><span class="degrees"> °C </span>
             </div>
-            <div class="col">
-              <div class="feels-like">
-                feels like
-                <div class="feels-like-temperature" id="currently-feels-like">
-                  -8°
-                </div>
-              </div>
+            <div class="col-4">
+              <img id="current-weather-icon"
+                src="http://openweathermap.org/img/wn/10d@2x.png"
+                width="84"
+              />
+              <div class="details" id="description">light snow</div>
             </div>
           </div>
 
-          <h2 id="description">light snow</h2>
-
-          <div class="weather-forecast" id="forecast"></div>
-        </div>
+            <div class="weather-forecast" id="forecast"></div>
+          </div>
 
         <div class="source">
           <a
@@ -87,6 +84,8 @@
             >open-source code</a
           >, by Cecilia O'Grady
         </div>
+
+      </div>
       </div>
     </div>
 
